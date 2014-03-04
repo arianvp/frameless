@@ -5,7 +5,7 @@ Sass.
 ** Features
 Frameless is in early development and not yet ready for production.
 
-*** DONE Flexbox-based grid system.
+*** TODO Flexbox-based grid system.
 A grid system based on flexbox. Because of the principle of separation
 of concerns, this is not a bunch of CSS classes, but rather a bunch of
 Sass mixins. HTML should not mention any of this.
