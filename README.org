@@ -1,0 +1,21 @@
+* Frameless
+Frameless is a CSS framework that does it right. It is written in
+Sass.
+
+** Features
+Frameless is in early development and not yet ready for production.
+
+*** DONE Flexbox-based grid system.
+A grid system based on flexbox. Because of the principle of separation
+of concerns, this is not a bunch of CSS classes, but rather a bunch of
+Sass mixins. HTML should not mention any of this.
+
+*** TODO Normalized form fields, buttons and links
+It should be easy to style different kinds of form fields, buttons and
+links.
+ - Text fields, password fields, email address fields and the like, as
+   well as text areas.
+ - Buttons, submit buttons and reset buttons.
+ - Links and link-like buttons.
+
+*** TODO Margins and line heights for, inter alia, paragraphs and list items
