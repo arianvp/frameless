@@ -1,4 +1,20 @@
 (function() {
+    Array.prototype.pluck = function(key) {
+        return this.map(function(element) { return element[key]; });
+    }
+
+    Array.prototype.allEqual = function() {
+        var value = undefined;
+        var result = true;
+        for (var i = 0; i < this.length; ++i) {
+            if (i === 0) {
+                value = this[i];
+            }
+            result = result && value === this[i];
+        }
+        return result;
+    }
+
     var tests = {
         fullWidthTest: function() {
             var row = document.querySelector('#full-width-test > div');
@@ -8,17 +24,7 @@
 
         equalWidthTest: function() {
             var columns = document.querySelectorAll('#equal-width-test > div > div');
-            var size = undefined;
-            var success = true;
-            for (var i = 0; i < columns.length; ++i) {
-                if (size === undefined) {
-                    size = columns[i].offsetWidth;
-                }
-                if (columns[i].offsetWidth !== size) {
-                    success = false;
-                    break;
-                }
-            }
+            var success = [].slice.call(columns).pluck('offsetWidth').allEqual();
             assert('equal-width-test', success);
         },
 
