@@ -2,8 +2,8 @@
 Frameless
 =========
 
-Frameless is a CSS framework that does it right&#8482;. It is written
-in Sass.
+Frameless is a CSS framework that does it right. It is written in
+Sass.
 
 --------
 Features
