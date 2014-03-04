@@ -19,3 +19,5 @@ links.
  - Links and link-like buttons.
 
 *** TODO Margins and line heights for, inter alia, paragraphs and list items
+Never again undergo the pain of having to do this yourself. Again, these
+are just mixins; you have to provide the values you want yourself.
