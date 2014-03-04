@@ -1,0 +1,22 @@
+@import ../src/grid.sass
+$gap: 20px
+
+#full-width-test
+    & > div
+        @include fl-row
+        & > div
+            @include fl-col(1, $gap)
+
+#equal-width-test
+    & > div
+        @include fl-row
+        & > div
+            @include fl-col(1, $gap)
+
+#double-width-test
+    & > div
+        @include fl-row
+        & > div:nth-child(1)
+            @include fl-col(1, $gap)
+        & > div:nth-child(2)
+            @include fl-col(2, $gap)

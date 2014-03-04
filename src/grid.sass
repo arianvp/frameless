@@ -1,0 +1,12 @@
+@mixin fl-row
+    display: flex
+
+@mixin fl-col($width, $gap)
+    flex-basis: $gap * ($width - 1) * 2
+    flex-grow: $width
+
+    &:not(:first-child)
+        margin-left: $gap
+
+    &:not(:last-child)
+        margin-right: $gap
