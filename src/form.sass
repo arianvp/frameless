@@ -1,0 +1,22 @@
+$-fl-input-types: (date, datetime, datetime-local, email, month, number, password, search, tel, text, time, url, week)
+$fl-text-field-selectors: "textarea"
+@each $input-type in $-fl-input-types
+    $fl-text-field-selectors: "#{$fl-text-field-selectors}, input[type=\"#{$input-type}\"]"
+
+@mixin fl-text-field()
+    border: none
+    font: inherit
+    line-height: inherit
+    margin: 0
+    outline: none
+    padding: 0
+    vertical-align: text-bottom
+
+    // TODO: Find some way to allow visibility of spinners anyway.
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+        display: none
+        margin: 0
+
+    &::-webkit-datetime-edit-fields-wrapper
+        padding: 0
