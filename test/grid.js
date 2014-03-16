@@ -31,8 +31,8 @@
         doubleWidthTest: function() {
             var firstColumn = document.querySelector('#double-width-test > div > div:nth-child(1)');
             var secondColumn = document.querySelector('#double-width-test > div > div:nth-child(2)');
-            var first = (firstColumn.offsetWidth * 2);
-            var second = (secondColumn.offsetWidth - 40);
+            var first = firstColumn.offsetWidth * 2;
+            var second = secondColumn.offsetWidth - 40;
             assert('double-width-test', Math.abs(first - second) <= 2);
         }
     };
