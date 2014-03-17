@@ -1,0 +1,60 @@
+@import url(reset.css);
+body {
+  background: #ffdc00;
+  color: #111111;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+#container {
+  margin: 0 auto;
+  width: 960px; }
+
+#header {
+  text-align: center; }
+  #header #title {
+    font-size: 144px;
+    font-weight: bold;
+    line-height: 232.99689px; }
+  #header #slogan {
+    font-size: 36px;
+    line-height: 58.24922px; }
+
+#content > article {
+  border-top: solid 1px #111111;
+  margin-top: 29.12461px;
+  padding-top: 29.12461px; }
+  #content > article > h2 {
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 87.37384px;
+    text-align: center; }
+  #content > article > .feature {
+    display: flex; }
+    #content > article > .feature > .description {
+      flex-basis: 291.24612px;
+      flex-grow: 6; }
+      #content > article > .feature > .description:not(:first-child) {
+        margin-left: 29.12461px; }
+      #content > article > .feature > .description:not(:last-child) {
+        margin-right: 29.12461px; }
+      #content > article > .feature > .description > p {
+        font-size: 18px;
+        line-height: 29.12461px;
+        margin: 29.12461px 0; }
+    #content > article > .feature > .sample {
+      flex-basis: 291.24612px;
+      flex-grow: 6; }
+      #content > article > .feature > .sample:not(:first-child) {
+        margin-left: 29.12461px; }
+      #content > article > .feature > .sample:not(:last-child) {
+        margin-right: 29.12461px; }
+      #content > article > .feature > .sample > pre {
+        background: #111111;
+        color: #ffdc00;
+        border-radius: 4px;
+        font-family: Menlo, "DejaVu Sans Mono", monospace;
+        font-size: 16.2px;
+        line-height: 29.12461px;
+        margin: 29.12461px 0;
+        padding: 29.12461px; }

@@ -1,0 +1,12 @@
+.test-success {
+    background: #00ff00;
+}
+
+.test-fail {
+    background: #ff0000;
+}
+
+body {
+    margin: 0 auto;
+    width: 1000px;
+}

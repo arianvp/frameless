@@ -1,0 +1,36 @@
+#full-width-test > div {
+  display: flex; }
+  #full-width-test > div > div {
+    flex-basis: 0px;
+    flex-grow: 1; }
+    #full-width-test > div > div:not(:first-child) {
+      margin-left: 20px; }
+    #full-width-test > div > div:not(:last-child) {
+      margin-right: 20px; }
+
+#equal-width-test > div {
+  display: flex; }
+  #equal-width-test > div > div {
+    flex-basis: 0px;
+    flex-grow: 1; }
+    #equal-width-test > div > div:not(:first-child) {
+      margin-left: 20px; }
+    #equal-width-test > div > div:not(:last-child) {
+      margin-right: 20px; }
+
+#double-width-test > div {
+  display: flex; }
+  #double-width-test > div > div:nth-child(1) {
+    flex-basis: 0px;
+    flex-grow: 1; }
+    #double-width-test > div > div:nth-child(1):not(:first-child) {
+      margin-left: 20px; }
+    #double-width-test > div > div:nth-child(1):not(:last-child) {
+      margin-right: 20px; }
+  #double-width-test > div > div:nth-child(2) {
+    flex-basis: 40px;
+    flex-grow: 2; }
+    #double-width-test > div > div:nth-child(2):not(:first-child) {
+      margin-left: 20px; }
+    #double-width-test > div > div:nth-child(2):not(:last-child) {
+      margin-right: 20px; }

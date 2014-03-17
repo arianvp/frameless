@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Frameless</title>
+        <link rel='stylesheet' href='style.css' />
+    </head>
+    <body>
+        <div id='container'>
+            <header id='header'>
+                <h1 id='title'>Frameless</h1>
+                <p id='slogan'>A CSS framework that does it right</p>
+            </header>
+
+            <section id='content'>
+                <article>
+                    <h2>Grid System</h2>
+                    <div class='feature'>
+                        <section class='description'>
+                            <p>
+                                The grid system of Frameless uses
+                                flexbox and is implemented as two
+                                Sass mixins.
+                            </p>
+
+                            <p>
+                                Using Sass mixins instead of CSS
+                                classes allows for greater separation
+                                of concerns; no ugly HTML littered
+                                with grid-related CSS classes.
+                            </p>
+                        </section>
+                        <section class='sample'>
+                            <pre><code>&lt;div id='container'>
+    &lt;section id='content'>
+        &lt;p>Lorem ipsum.&lt;/p>
+    &lt;/section>
+    &lt;section id='sidebar'>
+        &lt;p>Hi, I'm awesome.&lt;/p>
+    &lt;/section>
+&lt;/div></code></pre>
+
+                            <pre><code>@import "grid.sass"
+
+$col-gap: 20px
+
+@mixin col($width)
+    @include fl-col($width, $col-gap)
+
+#container
+    @include fl-row()
+
+    &amp; > #content
+        @include col(8)
+
+    &amp; > #sidebar
+        @include col(4)</code></pre>
+                        </section>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

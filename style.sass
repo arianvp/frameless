@@ -1,0 +1,75 @@
+@import "reset.css"
+@import "colors.sass"
+@import "grid.sass"
+
+$golden-ratio: 1.61803398875
+
+$font-family: 'Helvetica Neue', Arial, sans-serif
+$font-family-monospace: Menlo, 'DejaVu Sans Mono', monospace
+$font-size: 18px
+$font-size-monospace: $font-size * 0.9
+$line-height: $golden-ratio * $font-size
+
+$col-gap: $line-height
+
+@mixin col($width)
+    @include fl-col($width, $col-gap)
+
+body
+    background:  $yellow
+    color: $black
+    font-family: $font-family
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+
+#container
+    margin: 0 auto
+    width: 960px
+
+#header
+    text-align: center
+
+    #title
+        font-size: $font-size * 8
+        font-weight: bold
+        line-height: $line-height * 8
+
+    #slogan
+        font-size: $font-size * 2
+        line-height: $line-height * 2
+
+#content
+    & > article
+        border-top: solid 1px $black
+        margin-top: $line-height
+        padding-top: $line-height
+
+        & > h2
+            font-size: $font-size * 3
+            font-weight: bold
+            line-height: $line-height * 3
+            text-align: center
+
+        & > .feature
+            @include fl-row()
+
+            & > .description
+                @include col(6)
+
+                & > p
+                    font-size: $font-size
+                    line-height: $line-height
+                    margin: $line-height 0
+
+            & > .sample
+                @include col(6)
+
+                & > pre
+                    background: $black
+                    color: $yellow
+                    border-radius: 4px
+                    font-family: $font-family-monospace
+                    font-size: $font-size-monospace
+                    line-height: $line-height
+                    margin: $line-height 0
+                    padding: $line-height
