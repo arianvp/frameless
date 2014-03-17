@@ -6,6 +6,25 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased; }
 
+#fork-me-container {
+  display: block;
+  height: 300px;
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 300px; }
+  #fork-me-container > a {
+    background: #111111;
+    display: block;
+    color: #ffdc00;
+    font-size: 18px;
+    line-height: 29.12461px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 135.43769px;
+    -webkit-transform: rotate(45deg); }
+
 #container {
   margin: 0 auto;
   width: 960px; }

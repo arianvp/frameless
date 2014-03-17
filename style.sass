@@ -10,6 +10,8 @@ $font-size: 18px
 $font-size-monospace: $font-size * 0.9
 $line-height: $golden-ratio * $font-size
 
+$fork-me-container-size: 300px
+
 $col-gap: $line-height
 
 @mixin col($width)
@@ -21,6 +23,26 @@ body
     font-family: $font-family
     text-rendering: optimizeLegibility
     -webkit-font-smoothing: antialiased
+
+#fork-me-container
+    display: block
+    height: $fork-me-container-size
+    position: absolute
+    right: -$fork-me-container-size / 5
+    top: -$fork-me-container-size / 5
+    width: $fork-me-container-size
+
+    & > a
+        background: $black
+        display: block
+        color: $yellow
+        font-size: $font-size
+        line-height: $line-height
+        position: relative
+        text-align: center
+        text-decoration: none
+        top: $fork-me-container-size / 2 - $line-height / 2
+        -webkit-transform: rotate(45deg)
 
 #container
     margin: 0 auto
